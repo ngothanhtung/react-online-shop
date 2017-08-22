@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import FixedMenu from '../../Components/FixedMenu';
 import {
     Button,
     Container,
