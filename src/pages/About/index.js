@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import FixedMenu from '../../Components/FixedMenu';
+
 import {
     Button,
     Container,
@@ -15,47 +14,10 @@ import {
     Visibility,
 } from 'semantic-ui-react'
 
-
-
 export default class About extends Component {
-    state = {}
-
-    hideFixedMenu = () => this.setState({ visible: false })
-    showFixedMenu = () => this.setState({ visible: true })
-
     render() {
-        const { visible } = this.state
-
         return (
             <div>
-                { visible ? <FixedMenu /> : null }
-
-                <Visibility
-                    onBottomPassed={this.showFixedMenu}
-                    onBottomVisible={this.hideFixedMenu}
-                    once={false}
-                >
-                    <Segment
-                        inverted
-                        textAlign='center'
-                        style={{ padding: '1em 0em' }}
-                        vertical
-                    >
-                        <Container>
-                            <Menu inverted pointing secondary size='large'>
-                                <Menu.Item as={Link} to='/' active>Home</Menu.Item>
-                                <Menu.Item as={Link} to="/products">Work</Menu.Item>
-                                <Menu.Item as='a'>Company</Menu.Item>
-                                <Menu.Item as='a'>Careers</Menu.Item>
-                                <Menu.Item position='right'>
-                                    <Button as='a' inverted>Log in</Button>
-                                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                                </Menu.Item>
-                            </Menu>
-                        </Container>
-                    </Segment>
-                </Visibility>
-
                 <Segment style={{ padding: '8em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
@@ -73,7 +35,6 @@ export default class About extends Component {
                             <Grid.Column floated='right' width={6}>
                                 <Image
                                     bordered
-                                    rounded
                                     size='large'
                                     src='https://react.semantic-ui.com/assets/images/wireframe/white-image.png'
                                 />

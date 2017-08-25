@@ -5,7 +5,7 @@ import Product from './Product';
 class ProductList extends Component {
     render() {
         return (
-            <Grid columns={3}>
+            <Grid columns={4}>
                 {
                     this.props.data.map((p) =>
                         <Grid.Column key={p.id}>

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import FixedMenu from '../../Components/FixedMenu';
 
 import {
     Button,
@@ -17,63 +15,9 @@ import {
 } from 'semantic-ui-react'
 
 export default class Home extends Component {
-    state = {}
-
-    hideFixedMenu = () => this.setState({ visible: false })
-    showFixedMenu = () => this.setState({ visible: true })
-
     render() {
-        const { visible } = this.state
-
         return (
             <div>
-                { visible ? <FixedMenu /> : null }
-
-                <Visibility
-                    onBottomPassed={this.showFixedMenu}
-                    onBottomVisible={this.hideFixedMenu}
-                    once={false}
-                >
-                    <Segment
-                        inverted
-                        textAlign='center'
-                        style={{ minHeight: 700, padding: '1em 0em' }}
-                        vertical
-                    >
-                        <Container>
-                            <Menu inverted pointing secondary size='large'>
-                                <Menu.Item as={Link} to='/' active>Home</Menu.Item>
-                                <Menu.Item as={Link} to="/products">Work</Menu.Item>
-                                <Menu.Item as='a'>Company</Menu.Item>
-                                <Menu.Item as='a'>Careers</Menu.Item>
-                                <Menu.Item position='right'>
-                                    <Button as='a' inverted>Log in</Button>
-                                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-                                </Menu.Item>
-                            </Menu>
-                        </Container>
-
-                        <Container text>
-                            <Header
-                                as='h1'
-                                content='Imagine-a-Company'
-                                inverted
-                                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
-                            />
-                            <Header
-                                as='h2'
-                                content='Do whatever you want when you want to.'
-                                inverted
-                                style={{ fontSize: '1.7em', fontWeight: 'normal' }}
-                            />
-                            <Button primary size='huge'>
-                                Get Started
-                                <Icon name='right arrow' />
-                            </Button>
-                        </Container>
-                    </Segment>
-                </Visibility>
-
                 <Segment style={{ padding: '8em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
@@ -91,7 +35,6 @@ export default class Home extends Component {
                             <Grid.Column floated='right' width={6}>
                                 <Image
                                     bordered
-                                    rounded
                                     size='large'
                                     src='https://react.semantic-ui.com/assets/images/wireframe/white-image.png'
                                 />
