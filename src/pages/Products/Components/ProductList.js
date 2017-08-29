@@ -1,21 +1,26 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react'
-import Product from './Product';
+import ProductItem from './ProductItem';
 
 class ProductList extends Component {
     render() {
         return (
             <Grid columns={4}>
                 {
-                    this.props.data.map((p) =>
+                    this.props.products.map((p) =>
                         <Grid.Column key={p.id}>
-                            <Product onAddToCart={this.props.onAddToCart.bind(this, p)} product={p} />
+                            <ProductItem product={p} />
                         </Grid.Column>
                     )
                 }
             </Grid>
         );
     }
+}
+
+ProductList.propTypes = {
+    products: PropTypes.array.isRequired,
 }
 
 export default ProductList;
