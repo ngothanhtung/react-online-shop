@@ -35,7 +35,7 @@ class MainMenu extends Component {
                     <Container>
                         <Menu inverted pointing secondary size='large'>
                             <Menu.Item as={Link} to="/" name="home" active={activeItem === "home"} onClick={this.onMenuItemClick}>Home</Menu.Item>
-                            <Menu.Item as={Link} to="/products" name='products' active={activeItem === "products"} onClick={this.onMenuItemClick}>Products</Menu.Item>
+                            <Menu.Item as={Link} to="/products" name='products' active={activeItem === "products"} onClick={this.onMenuItemClick}>Products</Menu.Item>                        
                             <Menu.Item as={Link} to="/about" name="about" active={activeItem === "about"} onClick={this.onMenuItemClick}>About</Menu.Item>
                             <Menu.Item position='right'>
                                 <Button as='a' inverted>Log in</Button>

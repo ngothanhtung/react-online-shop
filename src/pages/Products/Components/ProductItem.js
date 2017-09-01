@@ -12,7 +12,7 @@ class ProductItem extends Component {
     render() {
         return (
             <Card color='blue'>
-                <Image src='http://via.placeholder.com/260x260'/>
+                <Image style={{width: '100%'}} src='http://via.placeholder.com/260x260'/>
                 <Card.Content>
                     <Card.Header>
                         {this.props.product.name}
