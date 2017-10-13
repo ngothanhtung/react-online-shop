@@ -31,7 +31,7 @@ class ProductItem extends Component {
                                 <Icon name='browser'/> Detail
                             </Button.Content>
                             <Button.Content hidden>
-                                <Menu.Item as={Link} style={styles.link} to={"/product/" + this.props.product.id} name="home">
+                                <Menu.Item as={Link} style={styles.link} to={"/product/" + this.props.product._id} name="home">
                                      View detail
                                 </Menu.Item>
                             </Button.Content>

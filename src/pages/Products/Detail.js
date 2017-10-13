@@ -17,7 +17,7 @@ class ProductDetail extends Component {
 
         this.state.ShoppingCartItems = JSON.parse(localStorage.getItem('shopping-cart') || '[]');
 
-        fetch('https://slacklivechat.com/jsonplaceholder/product/' + this.props.id)
+        fetch('http://localhost:3000/product/' + this.props.id)
             .then(res => res.json())
             .then((data) => {
                 let product = data;
@@ -35,7 +35,7 @@ class ProductDetail extends Component {
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
                             <Grid.Column width={4}>
-                                <Image src='http://via.placeholder.com/260x260'/>
+                                <Image src={product.imageUrl}/>
                             </Grid.Column>
                             <Grid.Column width={12}>
                                 <Header as="h1">{product.name}</Header>
