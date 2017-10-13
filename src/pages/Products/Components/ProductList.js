@@ -9,7 +9,7 @@ class ProductList extends Component {
             <Grid columns={4}>
                 {
                     this.props.products.map((p) =>
-                        <Grid.Column key={p.id}>
+                        <Grid.Column key={p._id}>
                             <ProductItem product={p} />
                         </Grid.Column>
                     )

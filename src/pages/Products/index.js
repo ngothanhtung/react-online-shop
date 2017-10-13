@@ -18,7 +18,8 @@ class Products extends Component {
         this.state.ShoppingCartItems = JSON.parse(localStorage.getItem('shopping-cart') || '[]');
 
         // get json data from remote api
-        fetch('https://slacklivechat.com/jsonplaceholder/products')
+        //fetch('https://slacklivechat.com/jsonplaceholder/products')
+        fetch('http://localhost:3000/product/all')
             .then(res => res.json())
             .then((data) => {
                 this.state.Products = data;

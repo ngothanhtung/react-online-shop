@@ -9,8 +9,8 @@ import {
 
 import Home from './pages/Home/index';
 import About from './pages/About/index';
-import Products from './pages/Products/index';
-import ProductDetail from './pages/Products/ProductDetail';
+import Products from './pages/Products/Index';
+import ProductDetail from './pages/Products/Detail';
 import './App.css';
 
 class App extends Component {
