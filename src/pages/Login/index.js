@@ -39,6 +39,8 @@ class Login extends Component {
 
       // get token
       // sessionStorage.getItem("token");
+
+      
     }).catch(function (err) {
       // Error :(
       console.log(err);
