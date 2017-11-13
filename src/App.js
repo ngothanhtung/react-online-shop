@@ -9,6 +9,7 @@ import {
 
 import Home from './pages/Home/index';
 import About from './pages/About/index';
+import Login from './pages/Login/index';
 import Products from './pages/Products/Index';
 import ProductDetail from './pages/Products/Detail';
 import './App.css';
@@ -22,6 +23,7 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/products" component={Products}/>
                     <Route path="/product/:id" component={ProductDetailRoute}/>
+                    <Route path="/login" component={Login}/>
                     <Route path="/about" component={About}/>
                     <Footer/>
                 </div>

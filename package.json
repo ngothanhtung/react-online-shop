@@ -13,9 +13,7 @@
   "devDependencies": {
     "react-scripts": "1.0.11"
   },
-
-  "homepage" : "http://ngothanhtung.github.io/react-online-shop",
-
+  "homepage": "http://ngothanhtung.github.io/react-online-shop",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

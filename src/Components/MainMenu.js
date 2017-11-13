@@ -38,7 +38,7 @@ class MainMenu extends Component {
                             <Menu.Item as={Link} to="/products" name='products' active={activeItem === "products"} onClick={this.onMenuItemClick}>Products</Menu.Item>                        
                             <Menu.Item as={Link} to="/about" name="about" active={activeItem === "about"} onClick={this.onMenuItemClick}>About</Menu.Item>
                             <Menu.Item position='right'>
-                                <Button as='a' inverted>Log in</Button>
+                                <Button as={Link} to="/login" active={activeItem === "login"} onClick={this.onMenuItemClick} inverted>Log in</Button>
                                 <Button as='a' inverted style={{marginLeft: '0.5em'}}>Sign Up</Button>
                                 <ShoppingCartModal/>
                             </Menu.Item>
