@@ -12,13 +12,13 @@ class ProductItem extends Component {
     render() {
         return (
             <Card color='blue'>
-                <Image style={{width: '100%'}} src={this.props.product.imageUrl}/>
+                <Image style={{width: '100%'}} src={this.props.product.image.coverImageUrl}/>
                 <Card.Content>
                     <Card.Header>
                         {this.props.product.name}
                     </Card.Header>
                     <Card.Meta>
-                        Price: {this.props.product.price}
+                        Price: {this.props.product.price.price}
                     </Card.Meta>
                     <Card.Meta>
                         Discount: {this.props.product.discount}%

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Header, Segment, Grid} from 'semantic-ui-react';
+import React, { Component } from 'react';
+import { Header, Segment, Grid } from 'semantic-ui-react';
 import ProductList from './Components/ProductList';
 import Loading from "../../Components/Loading";
 
@@ -19,11 +19,17 @@ class Products extends Component {
 
         // get json data from remote api
         //fetch('https://slacklivechat.com/jsonplaceholder/products')
-        fetch('http://localhost:3000/product/all')
+        fetch('http://localhost:9000/api/products', {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'x-access-token': sessionStorage.getItem('token')
+            })
+        })
             .then(res => res.json())
-            .then((data) => {
-                this.state.Products = data;
-                this.setState({loading: false});
+            .then((result) => {
+                this.state.Products = result.data;
+                this.setState({ loading: false });
                 this.setState(this.state);
             });
     }
@@ -31,11 +37,11 @@ class Products extends Component {
     render() {
         if (this.state.loading === false) {
             return (
-                <Segment style={{padding: '2em 0em'}} vertical>
+                <Segment style={{ padding: '2em 0em' }} vertical>
                     <Grid container stackable verticalAlign='middle'>
                         <Grid.Row>
                             <Grid.Column textAlign='center'>
-                                <Header as='h3' style={{fontSize: '2em'}}>Products</Header>
+                                <Header as='h3' style={{ fontSize: '2em' }}>Products</Header>
                                 <ProductList products={this.state.Products}
                                 />
                             </Grid.Column>

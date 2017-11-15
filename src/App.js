@@ -23,7 +23,7 @@ class App extends Component {
                     <Route exact path="/" component={Home}/>
                     <Route path="/products" component={Products}/>
                     <Route path="/product/:id" component={ProductDetailRoute}/>
-                    <Route path="/login" component={Login}/>
+                    <Route path="/login" component={LoginRoute}/>
                     <Route path="/about" component={About}/>
                     <Footer/>
                 </div>
@@ -39,10 +39,15 @@ const ProductDetailRoute = ({match}) => (
     </div>
 )
 
-
 const PageRoute = ({match}) => (
     <div>
         <MainMenu activeItem={match.params.id != null ? match.params.id : "home"}/>
+    </div>
+)
+
+const LoginRoute = () => (
+    <div>
+        <Login title="Hello" />
     </div>
 )
 
